@@ -1,7 +1,7 @@
 <?php
 #login-callback.php
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 session_start();
 
@@ -30,7 +30,7 @@ if (isset($accessToken)){
     //The user denied the request
 }
 
-header('Location: index.php');
+header('Location: ../index.php');
 
 ?>
 

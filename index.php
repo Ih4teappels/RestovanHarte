@@ -61,10 +61,8 @@ $permissions = ['email', 'user_likes'];
 //online
 // $loginUrl = $helper->getLoginUrl('https://17786.hosts.ma-cloud.nl/RestovanHarte/logic/login-callback.php', $permissions);
 //local
-$loginUrl = $helper->getLoginUrl('https://localhost/RestovanHarte/logic/login-callback.php', $permissions);
+$loginUrl = $helper->getLoginUrl('http://localhost/RestovanHarte/logic/login-callback.php', $permissions);
 
 echo '<a href="'. $loginUrl . '">Log in with Facebook!</a>';
-
-echo "<img src='".$picture['url']."'/>";
 
 ?>
