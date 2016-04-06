@@ -35,27 +35,3 @@ header('Location: index.php');
 ?>
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Resto van Harte BBQ</title>
-</head>
-
-<body>
-
-
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-
-
-
-
-    
-</body>
-</html>

@@ -6,7 +6,7 @@ $request_code = ("$code1-$code2-$code3");
 $user_id = $user['id'];
 
 if($request_code == '--'){
-    echo "vul hier jou code in";
+    // echo "vul hier jou code in";
 }
 else{
 
