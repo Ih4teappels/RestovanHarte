@@ -25,24 +25,35 @@ $fb = new Facebook\Facebook([
 try {
     $response = $fb->get('/me?fields=id,name,bio,birthday,picture,context,cover,currency,devices,education,email,favorite_athletes,favorite_teams,first_name,gender,age_range,hometown,inspirational_people,install_type,installed,interested_in,is_shared_login,is_verified,languages,last_name,link,locale,location,meeting_for,middle_name,name_format,payment_pricepoints,political,public_key,quotes,relationship_status,religion,security_settings,shared_login_upgrade_required_by,significant_other,sports,test_group,third_party_id,timezone,updated_time,verified,video_upload_limits,viewer_can_send_gift,website,work&debug=all');
 
-    include 'views/header.php';
+    include 'views/codeHeader.html';
 
     include 'logic/get_userInfo.php';
     include 'logic/check.php';
+
+
     
     switch ($page) {
         case 'profile':
             //getting user specific info
             include 'views/user_info.php';
-            include 'logic/get_points.php';
-            include 'views/show_points.php';
             break;
+
+        case 'logout':
+
+            // kill the session
+            session_destroy();
+            // redirect back to website's home
+            header('Location: http://localhost/RestovanHarte/');
         
         default:
             //form for inputting a code
             include 'views/code_form.php';
+            include 'logic/get_points.php';
+            include 'views/show_points.php';
             break;
     }
+
+    // echo '<a href="?page=logout">Log out from Facebook!</a>';
 
 
 
@@ -63,6 +74,5 @@ $permissions = ['email', 'user_likes'];
 //local
 $loginUrl = $helper->getLoginUrl('http://localhost/RestovanHarte/logic/login-callback.php', $permissions);
 
-echo '<a href="'. $loginUrl . '">Log in with Facebook!</a>';
-
-?>
+// echo '<div id="fbLogin"><a href="'. $loginUrl . '">Sign in with Facebook!</a></div>';
+include 'views/loginHeader.php';
