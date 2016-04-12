@@ -33,10 +33,6 @@ try {
 
     
     switch ($page) {
-        case 'profile':
-            //getting user specific info
-            include 'views/user_info.php';
-            break;
 
         case 'logout':
 
@@ -53,6 +49,7 @@ try {
             break;
     }
 
+    include 'views/footer.html';
     // echo '<a href="?page=logout">Log out from Facebook!</a>';
 
 

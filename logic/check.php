@@ -18,23 +18,23 @@ if($page == 'check'){
     
     if ($user_match_count == 1)
  {
-        echo 'deze code is correct';
+        echo '<p>deze code is correct,</p>';
         
         $row = $result->fetch_assoc();
         
         if ($row['used'] == NULL){
-            echo ' en nog niet gebruikt <h1>+1</h1>';
+            echo '<p> en nog niet gebruikt</p>';
             
             $used = $mysqli->query ("UPDATE codes SET used='used' WHERE code = '".$request_code."'");    
             $add_user = $mysqli->query ("UPDATE codes SET facebook_id ='".$user_id."' WHERE code = '".$request_code."'");
             $add_username = $mysqli->query ("UPDATE codes SET facebook_name = '". $user['name'] . "'WHERE code = '".$request_code."'");
         }
         else{
-            echo ' maar hij is helaas al een keer gebruikt';
+            echo ' <p> maar hij is helaas al een keer gebruikt</p>';
         }
  }
  else{
-  echo 'deze code is niet correct, probeer het nog een keer';
+  echo '<p>deze code is niet correct, probeer het nog een keer</p>';
 
  }
 }

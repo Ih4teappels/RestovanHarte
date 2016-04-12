@@ -127,6 +127,13 @@
     
 }
 
+/*page wrapper*/
+
+#wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
 /*code form*/
 
 #codeForm h3 {
