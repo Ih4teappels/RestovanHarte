@@ -27,9 +27,7 @@ try {
 
     include 'views/codeHeader.html';
 
-    include 'logic/get_userInfo.php';
-    include 'logic/check.php';
-
+    
 
     
     switch ($page) {
@@ -42,9 +40,17 @@ try {
             header('Location: http://localhost/RestovanHarte/');
         
         default:
+            //getting the users info
+            include 'logic/get_userInfo.php';
+
             //form for inputting a code
             include 'views/code_form.php';
-            include 'logic/get_points.php';
+
+            //checks if the inputted code is correct
+            include 'logic/check.php';
+
+            //shows the spaarkaart
+            // include 'logic/get_points.php'; //verplaatst naar check.php
             include 'views/show_points.php';
             break;
     }

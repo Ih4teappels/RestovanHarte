@@ -10,3 +10,5 @@
 		</div>
 	</div>
 </header>
+<div id="wrapper">
+<?php echo '<div id="fbLogin"><a href="'. $loginUrl . '">Sign in with Facebook!</a></div>'?>

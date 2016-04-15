@@ -1,0 +1,42 @@
+#spaarkaart {
+	max-width: 100%;
+	/*border: 1px solid #000;*/
+	background-color: #F2F2F2;
+	display: block;
+}
+
+#spaarkaart h2 {
+	color: #E1011B;
+	margin-left: .5em;
+
+}
+
+#spaarkaart h3 {
+	color: #E1011B;
+	margin-left: .5em;
+	
+}
+
+#harts {
+	display: block;
+}
+
+#spaarHart {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-right: .5em;
+	margin-left: .5em;
+	height: 125px;
+	width: 125px;
+	position: relative;
+	border-bottom: 2px solid #E1011B;
+	border-right: 2px solid #E1011B;
+	border-top: 2px solid #E1011B;
+	border-left: 2px solid #E1011B;
+	display: inline-block;
+	background-color: #FFF;
+}
+
+#codeResult {
+	color: #E1011B;
+}

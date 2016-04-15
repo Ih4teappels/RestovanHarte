@@ -1,4 +1,4 @@
-<form id="codeForm" method="post" action="?page=check">
+<form id="codeForm" action="?page=check" method="post">
   <h3>Vul hier je code in: </h3>
     <input id="a" type="text" name="code1" maxlength="4" />-
     <input id="b" type="text" name="code2" maxlength="4" />-
