@@ -7,4 +7,4 @@
 	</div>
 
 <div id="wrapper">
-<?php echo '<div id="fbLogin"><a href="'. $loginUrl . '">Sign in with Facebook!</a></div>'?>
+<?php echo '<div id="fbLogin"><a href="'. $loginUrl . '">Log in met Facebook!</a></div>'?>
